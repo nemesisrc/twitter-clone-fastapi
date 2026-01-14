@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import HTMLResponse
 from typing import Optional
 from src.schemas import PostCreate
 from dotenv import load_dotenv
@@ -41,9 +42,21 @@ text_posts = {
 
 
 #homepage
-@app.get("/")
+@app.get("/", response_class = HTMLResponse)
 def homepage():
-    return "Welcome to twitter clone homepage !!"
+    return """
+    <html>
+        <head>
+            <title>Twitter Clone</title>
+        </head>
+        <body>
+            <br>
+            <br>
+            <h1>Welcome to Twitter Clone Application</h1>
+        </body>
+    </html>
+    """
+    # Alternatively, you can return plain text return "Welcome to twitter clone homepage !!"
 
 
 #get all posts

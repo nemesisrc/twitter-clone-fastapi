@@ -219,9 +219,3 @@ If you like this project, don’t forget to **star ⭐ the repository**
 It helps a lot and keeps me motivated 😊
 
 ---
-
-### 💬 Happy Coding & Backend Building!
-
-```
-
----

@@ -50,8 +50,6 @@ def homepage():
             <title>Twitter Clone</title>
         </head>
         <body>
-            <br>
-            <br>
             <h1>Welcome to Twitter Clone Application</h1>
         </body>
     </html>

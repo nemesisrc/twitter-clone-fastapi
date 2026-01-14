@@ -1,0 +1,22 @@
+text_posts = {
+    "1": {"title": "Post 01", "content": "This is my first post"},
+    "2": {"title": "Post 02", "content": "This is my second post"},
+    "3": {"title": "Post 03", "content": "This is my third post"},
+    "4": {"title": "Post 04", "content": "This is my fourth post"},
+    "5": {"title": "Post 05", "content": "This is my fifth post"},
+    "6": {"title": "Post 06", "content": "This is my sixth post"},
+    "7": {"title": "Post 07", "content": "This is my seventh post"},
+    "8": {"title": "Post 08", "content": "This is my eighth post"},
+    "9": {"title": "Post 09", "content": "This is my ninth post"},
+    "10": {"title": "Post 10", "content": "This is my tenth post"},
+    "11": {"title": "Post 11", "content": "This is my eleventh post"},
+    "12": {"title": "Post 12", "content": "This is my twelfth post"},
+    "13": {"title": "Post 13", "content": "This is my thirteenth post"},
+    "14": {"title": "Post 14", "content": "This is my fourteenth post"},
+    "15": {"title": "Post 15", "content": "This is my fifteenth post"},
+    "16": {"title": "Post 16", "content": "This is my sixteenth post"},
+    "17": {"title": "Post 17", "content": "This is my seventeenth post"},
+    "18": {"title": "Post 18", "content": "This is my eighteenth post"},
+    "19": {"title": "Post 19", "content": "This is my nineteenth post"},
+    "20": {"title": "Post 20", "content": "This is my twentieth post"}
+}

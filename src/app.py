@@ -2,40 +2,34 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from typing import Optional
 from src.schemas import PostCreate
+from src.temp_db import text_posts
+from src.db import Post, create_db_and_tables, get_async_session
+from sqlalchemy.ext.asyncio import AsyncSession
+from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 load_dotenv()
+
+
+# lifespan context manager for database setup and teardown
+# setup/teardown operations
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # create database and tables on startup
+    await create_db_and_tables()
+    yield
+    # any code after yield runs when the app shuts down
 
 
 app = FastAPI(
     title="Twitter Clone API",
     description="This is a sample twitter clone fastapi application",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 
 # temporary database
-text_posts = {
-    "1": {
-        "title": "Post 01",
-        "content": "This is my first post"
-    },
-    "2": {
-        "title": "Post 02",
-        "content": "This is my second post"
-    },
-    "3": {
-        "title": "Post 03",
-        "content": "This is my third post"
-    },
-    "4": {
-        "title": "Post 04",
-        "content": "This is my fourth post"
-    },
-    "5": {
-        "title": "Post 05",
-        "content": "This is my fifth post"
-    }
-}
+text_posts = text_posts
 
 
 #---------------------------------------- API ROUTES ----------------------------------------#

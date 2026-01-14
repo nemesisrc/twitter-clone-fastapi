@@ -1,6 +1,4 @@
 ---
-
-```markdown
 # 🚀 Social Media Clone (FastAPI)
 
 A **modern, high-performance social media backend** inspired by Twitter, built using **⚡ FastAPI**.  

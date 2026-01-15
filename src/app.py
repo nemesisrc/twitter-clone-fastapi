@@ -21,10 +21,10 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
+    lifespan=lifespan,
     title="Twitter Clone API",
     description="This is a sample twitter clone fastapi application",
-    version="1.0.0",
-    lifespan=lifespan
+    version="1.0.0"
 )
 
 
